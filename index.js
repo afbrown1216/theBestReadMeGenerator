@@ -11,8 +11,13 @@ inquirer
 
     }
 ])
-.then(function (response){
-    console.log(response)
+.then(function (res){
+    // console.log(response)
+    const {title} = res
+    fs.writeFile("genReadMe.md",`# ${title}`, (err) => {
+        if (err)throw err;
+        console.log('File created');
+    })
 })
 .catch(err => {
     console.log(err);
