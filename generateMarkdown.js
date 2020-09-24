@@ -47,7 +47,9 @@ function generateMarkdown(data) {
 
     ## License 
 
-    ${data.license}
+    ${licenseBadge}
+    Copyright (c) ${data.username}. 
+    Licensed under the ${data.license} license.
    
 
   
