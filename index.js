@@ -1,10 +1,9 @@
-const fs = require ("fs");
 const inquirer = require("inquirer");
-const generate = require("./generateMarkdown")
+const fs = require("fs");
+const generate = require("./generateMarkdown");
 
-
-inquirer
-.prompt([
+// array of questions for user
+const questions = [
     { 
         type: "input", 
         message: "What is the name of the project? ",
@@ -53,61 +52,29 @@ inquirer
         name: "email"
     }
 
+];
 
-])
-.then(function (data){
-    // console.log(response)
-    fs.writeFile("genReadMe.md", generate(data), (err) => {
-        if (err)throw err;
+// function to write README file
+function writeToFile(fileName, data) {
+    console.log(fileName, data);
+    fs.writeFile(fileName,generate(data), (err) => {
+        if (err) throw err;
         console.log('File created');
     })
-})
-.catch(err => {
-    console.log(err);
-});
+}
 
-
-// function generate (data){
-//     console.log(data);
-//     return `
+// function to initialize program
+function init() {
+    inquirer.prompt(questions).then( function (data) {
+        console.log(data);
+        writeToFile("README.md", data);
+    }).catch (err => {
+        console.log(err);
+    })
     
-// # ${data.title}
+}
 
-// ## Description
-
-// ${data.description}
-
-// ## Installation
-
-// ${data.installation}
-
-// ## Usage
-
-// ${data.usage}
-
-// ## Contributing
-
-// Here are some guidelines for anyone who would like to contribute to this application.
-
-// ${data.contributing}
-
-// ## Tests
-
-// ${data.tests}
-
-// ## Questions
-
-// If you have any questions please contact me here: 
-
-// GitHub: ${data.username}
-// Email: ${data.email}
-
-// ## License 
-
-// Copyright (c) ${data.username}. 
-// Licensed under the ${data.license} license.
+// function call to initialize program
+init();
 
 
-  
-//   `
-// }
