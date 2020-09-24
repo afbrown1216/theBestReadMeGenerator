@@ -1,5 +1,6 @@
 const fs = require ("fs");
 const inquirer = require("inquirer");
+const generate = require("./generateMarkdown")
 
 
 inquirer
@@ -67,16 +68,3 @@ inquirer
 });
 
 
-function generateMarkdown (data){
-    let licenseText = "";
-    if (data.license === "MIT"){
-        licenseText = "This application is licensed under the MIT License . . .";
-    }
-
-    return 
-    ` # ${data.title}`
-
-}
-
-
-module.exports = generateMarkdown;
