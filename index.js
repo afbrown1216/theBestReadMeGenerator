@@ -67,3 +67,47 @@ inquirer
 });
 
 
+// function generate (data){
+//     console.log(data);
+//     return `
+    
+// # ${data.title}
+
+// ## Description
+
+// ${data.description}
+
+// ## Installation
+
+// ${data.installation}
+
+// ## Usage
+
+// ${data.usage}
+
+// ## Contributing
+
+// Here are some guidelines for anyone who would like to contribute to this application.
+
+// ${data.contributing}
+
+// ## Tests
+
+// ${data.tests}
+
+// ## Questions
+
+// If you have any questions please contact me here: 
+
+// GitHub: ${data.username}
+// Email: ${data.email}
+
+// ## License 
+
+// Copyright (c) ${data.username}. 
+// Licensed under the ${data.license} license.
+
+
+  
+//   `
+// }

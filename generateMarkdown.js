@@ -4,53 +4,53 @@ function generateMarkdown(data) {
     let licenseBadge;
     if (data.license === "MIT"){
         licenseText = "This application is licensed under the MIT License . . .";
-        licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
     } else if (data.license === "Apache"){
-        licenseText = ""
+        licenseText = "";
         licenseBadge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
     }else if (data.license === "GNU GPLv3"){
         licenseText;
         licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
     }
     return `
-    
-    # ${data.title}
 
-    ## Description
+# ${data.title}
 
-    ${data.description}
+## Description
 
-    ## Installation
+${data.description}
 
-    ${data.installation}
+## Installation
 
-    ## Usage
+${data.installation}
 
-    ${data.usage}
+## Usage
 
-    ## Contributing
+${data.usage}
 
-    Here are some guidelines for anyone who would like to contribute to this application.
-    
-    ${data.contributing}
+## Contributing
 
-    ## Tests
+Here are some guidelines for anyone who would like to contribute to this application.
 
-    ${data.tests}
+${data.contributing}
 
-    ## Questions
+## Tests
 
-    If you have any questions please contact me here: 
-    
-    ${data.username}
-    ${data.email}
+${data.tests}
 
-    ## License 
+## Questions
 
-    ${licenseBadge}
-    Copyright (c) ${data.username}. 
-    Licensed under the ${data.license} license.
-   
+If you have any questions please contact me here: 
+
+GitHub: ${data.username}
+Email: ${data.email}
+
+## License 
+
+${licenseBadge}
+Copyright (c) ${data.username}. 
+Licensed under the ${data.license} license.
+
 
   
   `;
