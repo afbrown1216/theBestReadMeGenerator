@@ -50,15 +50,14 @@ inquirer
     {
         type: "input",
         message: "What is your email?",
-        name: "email address"
+        name: "email"
     }
 
 
 ])
-.then(function (res){
+.then(function (data){
     // console.log(response)
-    const {title} = res
-    fs.writeFile("genReadMe.md",`# ${title}`, (err) => {
+    fs.writeFile("genReadMe.md", generate(data), (err) => {
         if (err)throw err;
         console.log('File created');
     })
