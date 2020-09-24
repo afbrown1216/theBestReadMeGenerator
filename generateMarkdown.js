@@ -16,9 +16,20 @@ function generateMarkdown(data) {
 
 # ${data.title}
 
+${licenseBadge}
+
 ## Description
 
 ${data.description}
+
+## Table of Contents
+
+* Installation
+* Usage 
+* Contributing 
+* Tests
+* Questions 
+* License 
 
 ## Installation
 
@@ -47,7 +58,7 @@ Email: ${data.email}
 
 ## License 
 
-${licenseBadge}
+
 Copyright (c) ${data.username}. 
 Licensed under the ${data.license} license.
 
