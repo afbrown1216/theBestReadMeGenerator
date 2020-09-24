@@ -65,3 +65,18 @@ inquirer
 .catch(err => {
     console.log(err);
 });
+
+
+function generateMarkdown (data){
+    let licenseText = "";
+    if (data.license === "MIT"){
+        licenseText = "This application is licensed under the MIT License . . .";
+    }
+
+    return 
+    ` # ${data.title}`
+
+}
+
+
+module.exports = generateMarkdown;
