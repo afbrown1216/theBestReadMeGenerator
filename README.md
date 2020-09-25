@@ -1,12 +1,12 @@
 
 
-# ads
+# The Best README Generator 
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-af
+This is a command line application that produces a clean professional README.md page for a GitHub project. 
 
 ## Table of Contents
 
@@ -19,34 +19,35 @@ af
 
 ## Installation
 
-fa
+The steps for installation are: Fork the repository. Download your verision to your desktop via SSH Key or download. Run npm I to install the node packages. Then you are all set to run the CLI README Generator. 
 
 ## Usage
 
-af
+Use node to run the application right in the console. Below shows the cl "node index.js" and how the information capatured is returned to confirm it worked. 
+<p align="center">
+  <img alt="CLI generating README" src="Returned Data.png">
+</p>
+
+
 
 ## Contributing
 
-Here are some guidelines for anyone who would like to contribute to this application.
 
-fewa
+Please checkout the Contributor Code of Conduct in regards to contributing to this project [here](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html)
 
-## Tests
-
-fewa
 
 ## Questions
 
 If you have any questions please contact me here: 
 
-GitHub: feaw
-Email: fewa
+[GitHub](https://github.com/afbrown1216)
+
 
 ## License 
 
 
-Copyright (c) feaw. 
-Licensed under the Apache license.
+Copyright (c) afbrown1216. 
+Licensed under the MIT license.
 
 
   
